@@ -1,0 +1,14 @@
+function carinho (){
+    let A = ["C1","C3","C6","C1","C2","C1","C8"];
+    let contador  = 0;
+    let resultado = prompt(" ecris le code à chercher (ex : C1 , C2 , C3 ...):")
+    
+       for ( let i = 0 ;i <A.iength ; i++){
+        if (A[i] ===  B){
+            count++;
+        }
+       } 
+       console.log(" o código"+ resultado +"aparece"+ contador +"vezes.")
+    
+ }
+ carinho();
