@@ -1,0 +1,23 @@
+
+(function() {
+    const skills = ["C1","C2","C3","C4","C5","C6","C7","C8"];
+    let score = 0, rounds = 5;
+  
+    for (let r = 1; r <= rounds; r++) {
+      const seq = Array.from({length: r}, () => skills[Math.floor(Math.random()*8)]);
+      alert(`Ronde ${r}/${rounds}\nMémorise : ${seq.join(" ")}`);
+      
+      let ans = prompt(`Tape la séquence (séparée par espaces):`);
+      if (!ans) break; // si Annuler
+      
+      let reply = ans.toUpperCase().trim().split(/\s+/);
+      if (reply.join() === seq.join()) {
+        score++;
+        console.log(`✅ Correct (Score: ${score})`);
+      } else {
+        console.log(`❌ Faux. Correct: ${seq.join(" ")}, Toi: ${reply.join(" ")}`);
+      }
+    }
+    console.log(`🎯 Jeu fini ! Score final: ${score}/${rounds}`);
+  })();
+  
